@@ -2,7 +2,7 @@
 
 - name: "Fetch telegraf installation package | RedHat"
   action: get_url
-          url=http://get.influxdb.org/telegraf/telegraf-{{ telegraf_agent_version }}-1.x86_64.rpm
+          url={{ telegraf_agent_base_download_uri }}{{ telegraf_agent_version }}-1.x86_64.rpm
           dest=/tmp/telegraf_{{ telegraf_agent_version }}-1.x86_64.rpm
           mode=0440
 

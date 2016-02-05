@@ -23,7 +23,8 @@ Role Variables
 
 The following parameters can be set for the Telegraf agent:
 
-* `telegraf_agent_version`: The version of Telegraf to install. Default: `0.10.0`
+* `telegraf_agent_version`: The version of Telegraf to install. Default: `0.10.2`
+* `telegraf_agent_base_download_uri`: The base uri to download Telegraf: Default: `http://get.influxdb.org/telegraf/telegraf-` <0.10.2 on Debian: `http://get.influxdb.org/telegraf/telegraf_`
 * `telegraf_agent_interval`: The interval configured for sending data to the server. Default: `10`
 * `telegraf_agent_debug`: Setting the Telegraf in debug mode. Default: `False`
 * `telegraf_agent_round_interval`: Rounds collection interval to 'interval' Default: True
@@ -70,7 +71,7 @@ With the property `telegraf_plugins_default` it is set to use the default set of
 	  - plugin: netstat
 
 Every telegraf agent has these as an default configuration.
- 
+
 The 2nd parameter `telegraf_plugins_extra` can be used to add plugins specific to the servers goal. Following is an example for using this parameter for MySQL database servers:
 
 	cat group_vars/mysql_database
